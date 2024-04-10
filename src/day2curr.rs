@@ -26,17 +26,17 @@ pub fn run() {
                 let num: i32 = sub_game_contents[0].parse().unwrap();
                 let color: &str = sub_game_contents[1];
                 if color == "green"{
-                    if num > 13{
+                    if num >= 13{
                         is_possible = false;
                     }
                 }
                 else if color == "red"{
-                    if num > 12{
+                    if num >= 12{
                         is_possible = false;
                     }
                 }
                 else if color == "blue"{
-                    if num > 14{
+                    if num >= 14{
                         is_possible = false;
                     }
                 }
@@ -44,7 +44,7 @@ pub fn run() {
         }
         // println!("Game {count}: {is_possible}");
         if is_possible{
-            total += id;
+            total += count;
         }
         else{
             println!("Game {count}")
